@@ -9,16 +9,16 @@ SET client_min_messages = warning;
 SET escape_string_warning = off;
 
 --
--- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
+-- Name: SCHEMA paste; Type: COMMENT; Schema: -; Owner: paste
 --
 
-COMMENT ON SCHEMA public IS 'Standard public schema';
+COMMENT ON SCHEMA paste IS 'schema for paste';
 
 
-SET search_path = public, pg_catalog;
+SET search_path = paste, pg_catalog;
 
 --
--- Name: comments_id_seq; Type: SEQUENCE; Schema: public; Owner: www-data
+-- Name: comments_id_seq; Type: SEQUENCE; Schema: paste; Owner: paste
 --
 
 CREATE SEQUENCE comments_id_seq
@@ -28,14 +28,14 @@ CREATE SEQUENCE comments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.comments_id_seq OWNER TO "www-data";
+ALTER TABLE paste.comments_id_seq OWNER TO "paste";
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: comments; Type: TABLE; Schema: public; Owner: www-data; Tablespace: 
+-- Name: comments; Type: TABLE; Schema: paste; Owner: paste; Tablespace: 
 --
 
 CREATE TABLE comments (
@@ -47,10 +47,10 @@ CREATE TABLE comments (
 );
 
 
-ALTER TABLE public.comments OWNER TO "www-data";
+ALTER TABLE paste.comments OWNER TO "paste";
 
 --
--- Name: lang; Type: TABLE; Schema: public; Owner: www-data; Tablespace: 
+-- Name: lang; Type: TABLE; Schema: paste; Owner: paste; Tablespace: 
 --
 
 CREATE TABLE lang (
@@ -59,10 +59,10 @@ CREATE TABLE lang (
 );
 
 
-ALTER TABLE public.lang OWNER TO "www-data";
+ALTER TABLE paste.lang OWNER TO "paste";
 
 --
--- Name: lang_lang_id_seq; Type: SEQUENCE; Schema: public; Owner: www-data
+-- Name: lang_lang_id_seq; Type: SEQUENCE; Schema: paste; Owner: paste
 --
 
 CREATE SEQUENCE lang_lang_id_seq
@@ -72,17 +72,17 @@ CREATE SEQUENCE lang_lang_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.lang_lang_id_seq OWNER TO "www-data";
+ALTER TABLE paste.lang_lang_id_seq OWNER TO "paste";
 
 --
--- Name: lang_lang_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: www-data
+-- Name: lang_lang_id_seq; Type: SEQUENCE OWNED BY; Schema: paste; Owner: paste
 --
 
 ALTER SEQUENCE lang_lang_id_seq OWNED BY lang.lang_id;
 
 
 --
--- Name: paste; Type: TABLE; Schema: public; Owner: www-data; Tablespace: 
+-- Name: paste; Type: TABLE; Schema: paste; Owner: paste; Tablespace: 
 --
 
 CREATE TABLE paste (
@@ -98,10 +98,10 @@ CREATE TABLE paste (
 );
 
 
-ALTER TABLE public.paste OWNER TO "www-data";
+ALTER TABLE paste.paste OWNER TO "paste";
 
 --
--- Name: paste_id_seq; Type: SEQUENCE; Schema: public; Owner: www-data
+-- Name: paste_id_seq; Type: SEQUENCE; Schema: paste; Owner: paste
 --
 
 CREATE SEQUENCE paste_id_seq
@@ -111,31 +111,31 @@ CREATE SEQUENCE paste_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.paste_id_seq OWNER TO "www-data";
+ALTER TABLE paste.paste_id_seq OWNER TO "paste";
 
 --
--- Name: paste_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: www-data
+-- Name: paste_id_seq; Type: SEQUENCE OWNED BY; Schema: paste; Owner: paste
 --
 
 ALTER SEQUENCE paste_id_seq OWNED BY paste.id;
 
 
 --
--- Name: lang_id; Type: DEFAULT; Schema: public; Owner: www-data
+-- Name: lang_id; Type: DEFAULT; Schema: paste; Owner: paste
 --
 
 ALTER TABLE lang ALTER COLUMN lang_id SET DEFAULT nextval('lang_lang_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: www-data
+-- Name: id; Type: DEFAULT; Schema: paste; Owner: paste
 --
 
 ALTER TABLE paste ALTER COLUMN id SET DEFAULT nextval('paste_id_seq'::regclass);
 
 
 --
--- Name: lang_pkey; Type: CONSTRAINT; Schema: public; Owner: www-data; Tablespace: 
+-- Name: lang_pkey; Type: CONSTRAINT; Schema: paste; Owner: paste; Tablespace: 
 --
 
 ALTER TABLE ONLY lang
@@ -143,7 +143,7 @@ ALTER TABLE ONLY lang
 
 
 --
--- Name: paste_pkey; Type: CONSTRAINT; Schema: public; Owner: www-data; Tablespace: 
+-- Name: paste_pkey; Type: CONSTRAINT; Schema: paste; Owner: paste; Tablespace: 
 --
 
 ALTER TABLE ONLY paste
@@ -151,30 +151,16 @@ ALTER TABLE ONLY paste
 
 
 --
--- Name: id_index; Type: INDEX; Schema: public; Owner: www-data; Tablespace: 
+-- Name: id_index; Type: INDEX; Schema: paste; Owner: paste; Tablespace: 
 --
 
 CREATE UNIQUE INDEX id_index ON paste USING btree (id);
 
 
 --
--- Name: index_id; Type: INDEX; Schema: public; Owner: www-data; Tablespace: 
+-- Name: index_id; Type: INDEX; Schema: paste; Owner: paste; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_id ON lang USING btree (lang_id);
 
-
---
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
-
-
---
--- PostgreSQL database dump complete
---
 
