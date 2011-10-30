@@ -8,7 +8,11 @@ href='http://www.fsf.org/licensing/licenses/agpl-3.0.html'> AGPL 3.0</a>. <br />
 The code can be found in my git repository under <a
 href='http://git.snow-crash.org/?p=paste.pl.git'>
 http://git.snow-crash.org/?p=paste.pl.git</a> 
-and can be cloned via <i>git clone git://git.snow-crash.org/paste.pl</i>. 
+and can be cloned via <i>git clone git://git.snow-crash.org/paste.pl</i>. </p>
+
+<p>
+The program was adapted for our site by StuStaNet&nbsp;e.&nbsp;V.<br />
+You can get the code used to run this site using <tt>git clone git://git.stusta.mhn.de/ssn_paste.git</tt>.</p>
 
 [% END %]
 [%# vim: syntax=html sw=4 ts=4 noet shiftround
