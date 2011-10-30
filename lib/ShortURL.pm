@@ -21,8 +21,7 @@ use warnings;
 use Exporter; 
 use Config::IniFiles;
 use DBI; 
-use Digest::JHash qw(jhash);
-use Encode::Base58;
+use Digest::MD5 qw(md5);
 
 
 use Carp; 
@@ -117,7 +116,7 @@ sub add_url ($$) {
 		return 0; 
 	}
 
-	my $hash = encode_base58(Digest::JHash::jhash("$url" . time())); 
+	my $hash = Digest::MD5::md5_hex("$url" . time()); 
 
 	my $sth = $dbh->prepare("INSERT INTO shorturl (url, hash) VALUES (?,?)"); 
 
