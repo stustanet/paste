@@ -1,4 +1,4 @@
-[% WRAPPER common_htmlpage title="Grml paste error" %]
+[% WRAPPER common_htmlpage title="StuStaNet Pasteerror" %]
 <center>
 <h2>Some Error</h2>
 Some strange error has been occurred: <br /> [% error.info %]<br />

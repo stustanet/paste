@@ -382,8 +382,15 @@ sub print_paste {
 			return;
 		}
 	}
-	print_header();	
-    my $as_hidden = $cgi->param("as_hidden") ? 1 : 0 ; 
+	print_header();
+	my $as_hidden;
+	if (defined($cgi->param("as_hidden"))) {
+		$as_hidden = $cgi->param("as_hidden") ? 1 : 0 ; 
+	}
+	else {
+		$as_hidden = 1;
+	}
+
     $template->process('paste', {	"dbname" => "dbi:Pg:dbname=$dbname", 
 									"dbuser" => $dbuser, 
 									"dbpass" => $dbpass,
