@@ -310,7 +310,6 @@ sub print_show {
 }
 
 sub print_paste {
-<<<<<<< HEAD
     my ( $cgi, $status ) = (@_);
     my $code;
     if ( $cgi->param("upload") ) {

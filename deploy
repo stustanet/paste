@@ -1,0 +1,4 @@
+cp -r images /srv/www/paste/
+cp pastebin.css /srv/www/paste/
+cp rpc-interface.txt /srv/www/paste/
+cp -r * /srv/www/paste-cgi/

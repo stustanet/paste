@@ -26,12 +26,12 @@ use Digest::SHA qw(sha1_hex);
 use Digest::HMAC_SHA1 qw(hmac_sha1_hex);
 use RPC::XML;
 use RPC::XML::Client;
-use Text::ExtractWords qw (words_list);
+#use Text::ExtractWords qw (words_list);
 use Text::Wrap;
-use GnuPG;
+#use GnuPG;
 use File::Temp qw ( tempfile );
-use Format::Human::Bytes;
-use WWW::Honeypot::httpBL;
+#use Format::Human::Bytes;
+#use WWW::Honeypot::httpBL;
 
 use Carp;
 
