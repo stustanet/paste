@@ -1,4 +1,4 @@
-[% WRAPPER common_htmlpage title="Debian Pastezone" %]
+[% WRAPPER common_htmlpage title="StuStaNet Paste" %]
 <h1>About this Site</h1><br />
 
 <p>
@@ -9,7 +9,10 @@ The code can be found in my git repository under <a
 href='http://git.snow-crash.org/?p=paste.pl.git'>
 http://git.snow-crash.org/?p=paste.pl.git</a> or <a href="https://github.com/formorer/paste.pl">
 https://github.com/formorer/paste.pl</a>
-and can be cloned via <i>git clone git://git.snow-crash.org/paste.pl</i>. 
+and can be cloned via <i>git clone git://git.snow-crash.org/paste.pl</i>. </p>
+<p>
+The program was adapted for our site by StuStaNet&nbsp;e.&nbsp;V.<br />
+You can get the code used to run this site using <tt>git clone git://git.stusta.mhn.de/ssn_paste.git</tt>.</p>
 
 [% END %]
 [%# vim: syntax=html sw=4 ts=4 noet shiftround

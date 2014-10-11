@@ -1,4 +1,4 @@
-[% WRAPPER common_htmlpage title="Debian Pastezone" %]
+[% WRAPPER common_htmlpage title="StuStaNet Paste" %]
 [% INCLUDE include_hidden %]
 [% END %]
 [%# vim: syntax=html sw=4 ts=4 noet shiftround

@@ -9,8 +9,7 @@
 </head>
 
 <body>
-
-	<center><a href="/"><img src="/images/debian.png" alt="" border="0" hspace="0" vspace="0" height="61" /></a></center><br />
+<center><img src="/images/ssn.png" alt="StuStaNet e.V." border="0" hspace="0" vspace="0" height="61" /></center><br /> 
 <div id="titlebar">[% title %]</div>
 
 [%# vim: syntax=html sw=4 ts=4 noet shiftround

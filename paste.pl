@@ -310,6 +310,7 @@ sub print_show {
 }
 
 sub print_paste {
+<<<<<<< HEAD
     my ( $cgi, $status ) = (@_);
     my $code;
     if ( $cgi->param("upload") ) {
@@ -467,7 +468,5 @@ sub print_header {
     my $args = shift;
     print header ( -charset => 'utf-8', -encoding => 'utf-8', %{$args} );
 }
-
-# vim: syntax=perl sw=4 ts=4 noet shiftround
 
 # vim: syntax=perl sw=4 ts=4 noet shiftround
